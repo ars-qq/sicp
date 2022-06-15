@@ -21,4 +21,6 @@
       (sqrt-item (improve guess x) guess x)))
 
 (define (sqrt x)
-  (sqrt-item 1.0 (improve 1.0 x) x))
+  (if (= x 0)
+      0
+      (sqrt-item 1.0 (improve 1.0 x) x)))
